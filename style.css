@@ -1,0 +1,110 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        font-family: "Karla", sans-serif;
+        background-color: hsl(204, 43%, 93%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        line-height: 1.4em;
+    }
+
+    /* Painting */
+    .summary-box {
+        background-color: white;
+    }
+    .subscription-box {
+        background-color: hsl(179, 62%, 43%);
+    }
+    .features-box {
+        background-color: hsl(179, 62%, 45%);
+    }
+    .title {
+        color: hsl(179, 62%, 43%);
+    }
+    .guarantee-text {
+        color: hsl(71, 73%, 52%);
+    }
+    .details {
+        color: hsl(218, 22%, 67%);
+    }
+    
+    .subscription-box,
+    .features-box {
+        color: white;
+    }
+    /*Fonts*/
+    .subscription-box span {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .subscription-box p,
+    .features-box p {
+    font-weight: 300;
+    }
+    /* Spacing*/
+    h3 {
+    margin-bottom: 1.5em;
+    }
+    .guarantee-text {
+        margin-bottom: 1.5em;
+    }
+    .rates {
+    margin-bottom: 1em;
+    }
+    /* grid */
+    .container {
+        width: 33vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.33fr 0.66fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "summary-box summary-box"
+          "subscription-box features-box";
+    }
+      
+    .summary-box { grid-area: summary-box; }
+      
+    .subscription-box { grid-area: subscription-box; }
+      
+    .features-box { grid-area: features-box; }
+    
+    /* Général box padding */
+
+    .flex-item {
+    padding: 2.5em;
+    }
+    /* button style */
+    .subscription-box button {
+    background-color: hsl(71, 73%, 54%);
+    border: none;
+    color: white;
+    padding: 0.7em 1.5em;
+    width: 100%;
+    margin-top: 2em;
+    border-radius: 10px;
+    font-size: 1em;
+    max-width: 15em;
+    cursor: pointer;
+    box-shadow: 1px 25px 22px 6px rgba(163, 165, 174, 0.3);
+    -webkit-box-shadow: 1px 25px 22px 6px rgba(163, 165, 174, 0.3);
+    -moz-box-shadow: 1px 25px 22px 6px rgba(163, 165, 174, 0.3);
+    }
+
+@media only screen and (max-width: 768px) {
+    .container{
+        display: unset;
+        width: 90vw;
+    }
+}
